@@ -1,0 +1,72 @@
+baseURL = "https://jackyli-dev.github.io/"
+title = "Jacky Li"
+theme = "hugo-coder"
+locale = "en"
+defaultContentLanguage = "en"
+enableEmoji = true
+
+[pagination]
+pagerSize = 10
+
+[markup]
+[markup.highlight]
+noClasses = false
+
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = true
+
+[params]
+author = "Jacky Li"
+description = "Jacky Li's project portfolio"
+keywords = "portfolio,software,projects,demos,resume"
+info = ["Software Developer", "Project Demos"]
+dateFormat = "January 2, 2006"
+since = 2026
+colorScheme = "auto"
+hideColorSchemeToggle = false
+customCSS = ["css/custom.css"]
+
+[taxonomies]
+category = "categories"
+series = "series"
+tag = "tags"
+author = "authors"
+
+[[params.social]]
+name = "GitHub"
+icon = "fa-brands fa-github fa-2x"
+weight = 1
+url = "https://github.com/jackyli-dev/"
+
+[[params.social]]
+name = "LinkedIn"
+icon = "fa-brands fa-linkedin fa-2x"
+weight = 2
+url = "https://www.linkedin.com/"
+
+[[params.social]]
+name = "Email"
+icon = "fa-solid fa-envelope fa-2x"
+weight = 3
+url = "mailto:hello@example.com"
+
+[[menu.main]]
+name = "About"
+weight = 1
+url = "about/"
+
+[[menu.main]]
+name = "Projects"
+weight = 2
+url = "projects/"
+
+[[menu.main]]
+name = "Resume"
+weight = 3
+url = "docs/resume.pdf"
+
+[[menu.main]]
+name = "Contact"
+weight = 4
+url = "contact/"

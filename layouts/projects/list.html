@@ -1,0 +1,34 @@
+{{ define "content" }}
+<section class="container list portfolio-projects">
+  <header>
+    <h1 class="title">
+      <a class="title-link" href="{{ .Permalink | safeURL }}">{{ .Title }}</a>
+    </h1>
+  </header>
+
+  {{ .Content }}
+
+  <div class="portfolio-project-grid">
+    {{ range .Paginator.Pages }}
+      <article class="portfolio-project-card">
+        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        {{ with .Description }}<p>{{ . }}</p>{{ end }}
+        {{ with .Params.tech }}
+          <div class="portfolio-tags">
+            {{ range . }}<span>{{ . }}</span>{{ end }}
+          </div>
+        {{ else }}
+          {{ with .Params.tags }}
+            <div class="portfolio-tags">
+              {{ range . }}<span>{{ . }}</span>{{ end }}
+            </div>
+          {{ end }}
+        {{ end }}
+        <a class="portfolio-link" href="{{ .RelPermalink }}">View project</a>
+      </article>
+    {{ end }}
+  </div>
+
+  {{ partial "pagination.html" . }}
+</section>
+{{ end }}

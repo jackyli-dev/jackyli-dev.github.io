@@ -1,0 +1,33 @@
+{{ define "content" }}
+<section class="container page portfolio-project">
+  <article>
+    <header>
+      <p><a class="portfolio-link" href="{{ "/projects/" | relURL }}">Back to projects</a></p>
+      <h1 class="title">
+        <a class="title-link" href="{{ .Permalink | safeURL }}">{{ .Title }}</a>
+      </h1>
+      {{ with .Description }}<p class="portfolio-description">{{ . }}</p>{{ end }}
+    </header>
+
+    {{ with .Params.tech }}
+      <div class="portfolio-tags">
+        {{ range . }}<span>{{ . }}</span>{{ end }}
+      </div>
+    {{ end }}
+
+    {{ if or .Params.demoURL .Params.repoURL .Params.videoURL }}
+      <div class="portfolio-actions">
+        {{ with .Params.demoURL }}
+          {{ if ne . "#" }}<a href="{{ . }}" target="_blank" rel="noreferrer">Live demo</a>{{ else }}<span>Live demo placeholder</span>{{ end }}
+        {{ end }}
+        {{ with .Params.repoURL }}
+          {{ if ne . "#" }}<a href="{{ . }}" target="_blank" rel="noreferrer">GitHub repo</a>{{ else }}<span>GitHub repo placeholder</span>{{ end }}
+        {{ end }}
+        {{ with .Params.videoURL }}<a href="{{ . }}" target="_blank" rel="noreferrer">Video file</a>{{ end }}
+      </div>
+    {{ end }}
+
+    {{ .Content }}
+  </article>
+</section>
+{{ end }}

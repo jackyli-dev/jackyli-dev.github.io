@@ -1,0 +1,90 @@
+.portfolio-project-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  margin-top: 2rem;
+}
+
+.portfolio-project-card {
+  border: 1px solid rgba(128, 128, 128, 0.24);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.portfolio-project-card h2 {
+  font-size: 2rem;
+  margin-top: 0;
+}
+
+.portfolio-description {
+  opacity: 0.8;
+}
+
+.portfolio-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 1.25rem 0;
+}
+
+.portfolio-tags span {
+  border: 1px solid rgba(128, 128, 128, 0.28);
+  border-radius: 999px;
+  font-size: 1.3rem;
+  padding: 0.25rem 0.75rem;
+}
+
+.portfolio-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.portfolio-actions a,
+.portfolio-actions span,
+.portfolio-link {
+  border: 1px solid rgba(128, 128, 128, 0.35);
+  border-radius: 8px;
+  display: inline-flex;
+  font-weight: 700;
+  padding: 0.55rem 0.9rem;
+  text-decoration: none;
+}
+
+.portfolio-actions span {
+  opacity: 0.68;
+}
+
+.portfolio-gallery {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  margin: 1rem 0 2rem;
+}
+
+.portfolio-media-placeholder,
+.portfolio-video-placeholder {
+  align-items: center;
+  border: 1px dashed rgba(128, 128, 128, 0.5);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  min-height: 180px;
+  opacity: 0.75;
+  padding: 1rem;
+  text-align: center;
+}
+
+.portfolio-video-placeholder {
+  aspect-ratio: 16 / 9;
+  min-height: 240px;
+}
+
+.portfolio-project img,
+.portfolio-project video {
+  border-radius: 8px;
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
