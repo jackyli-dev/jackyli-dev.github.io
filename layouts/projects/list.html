@@ -11,6 +11,12 @@
   <div class="portfolio-project-grid">
     {{ range .Paginator.Pages }}
       <article class="portfolio-project-card">
+        {{ $project := . }}
+        {{ with .Params.featuredImage }}
+          <a class="portfolio-project-card-image" href="{{ $project.RelPermalink }}">
+            <img src="{{ . | relURL }}" alt="{{ $project.Title }}">
+          </a>
+        {{ end }}
         <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
         {{ with .Description }}<p>{{ . }}</p>{{ end }}
         {{ with .Params.tech }}

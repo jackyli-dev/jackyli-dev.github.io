@@ -8,7 +8,21 @@
 .portfolio-project-card {
   border: 1px solid rgba(128, 128, 128, 0.24);
   border-radius: 8px;
+  overflow: hidden;
   padding: 1.5rem;
+}
+
+.portfolio-project-card-image {
+  display: block;
+  margin: -1.5rem -1.5rem 1.25rem;
+}
+
+.portfolio-project-card-image img {
+  aspect-ratio: 16 / 9;
+  display: block;
+  height: auto;
+  object-fit: cover;
+  width: 100%;
 }
 
 .portfolio-project-card h2 {
@@ -61,6 +75,10 @@
   gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   margin: 1rem 0 2rem;
+}
+
+.portfolio-featured-image {
+  margin: 1.5rem 0 2rem;
 }
 
 .portfolio-media-placeholder,

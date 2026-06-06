@@ -15,6 +15,12 @@
       </div>
     {{ end }}
 
+    {{ with .Params.featuredImage }}
+      <figure class="portfolio-featured-image">
+        <img src="{{ . | relURL }}" alt="{{ $.Title }}">
+      </figure>
+    {{ end }}
+
     {{ if or .Params.demoURL .Params.repoURL .Params.videoURL }}
       <div class="portfolio-actions">
         {{ with .Params.demoURL }}
