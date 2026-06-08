@@ -26,6 +26,7 @@ since = 2026
 colorScheme = "auto"
 hideColorSchemeToggle = false
 customCSS = ["css/custom.css"]
+customJS = ["js/gallery-lightbox.js"]
 
 [taxonomies]
 category = "categories"

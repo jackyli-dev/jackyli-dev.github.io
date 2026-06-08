@@ -72,9 +72,28 @@
 
 .portfolio-gallery {
   display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  margin: 1rem 0 2rem;
+  gap: 1.5rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 1.5rem 0 2.5rem;
+}
+
+.portfolio-gallery figure {
+  margin: 0;
+}
+
+.portfolio-gallery figure:first-child {
+  grid-column: 1 / -1;
+}
+
+.portfolio-gallery img {
+  cursor: zoom-in;
+  width: 100%;
+}
+
+.portfolio-gallery figcaption {
+  font-size: 1.4rem;
+  margin-top: 0.5rem;
+  opacity: 0.72;
 }
 
 .portfolio-featured-image {
@@ -105,4 +124,69 @@
   display: block;
   height: auto;
   max-width: 100%;
+}
+
+.portfolio-lightbox {
+  align-items: center;
+  background: rgba(0, 0, 0, 0.86);
+  border: 0;
+  cursor: zoom-out;
+  height: 100%;
+  inset: 0;
+  justify-content: center;
+  margin: 0;
+  max-height: none;
+  max-width: none;
+  padding: 2rem;
+  width: 100%;
+}
+
+.portfolio-lightbox[open] {
+  display: flex;
+}
+
+.portfolio-lightbox::backdrop {
+  background: rgba(0, 0, 0, 0.86);
+}
+
+.portfolio-lightbox img {
+  border-radius: 8px;
+  cursor: default;
+  max-height: min(86vh, 1100px);
+  max-width: min(92vw, 1400px);
+  object-fit: contain;
+  width: auto;
+}
+
+.portfolio-lightbox-close {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.36);
+  border-radius: 999px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 2rem;
+  height: 4rem;
+  justify-content: center;
+  line-height: 1;
+  position: fixed;
+  right: 1.5rem;
+  top: 1.5rem;
+  width: 4rem;
+}
+
+.portfolio-lightbox-close:hover,
+.portfolio-lightbox-close:focus-visible {
+  background: rgba(255, 255, 255, 0.24);
+}
+
+@media (max-width: 700px) {
+  .portfolio-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-lightbox {
+    padding: 1rem;
+  }
 }
