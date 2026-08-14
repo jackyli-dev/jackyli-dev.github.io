@@ -16,9 +16,17 @@ This page collects several C++ rendering projects that build from ray casting to
 I implemented ray casting and a spatial data structure as a first step toward a full featured ray tracer.
 
 <div class="portfolio-gallery">
-  <div class="portfolio-media-placeholder">Add image: /projects/ray-tracing/images/ray-casting-01.png</div>
-  <div class="portfolio-media-placeholder">Add image: /projects/ray-tracing/images/ray-casting-02.png</div>
-  <div class="portfolio-media-placeholder">Add image: /projects/ray-tracing/images/ray-casting-03.png</div>
+  <figure>
+    <img src="/projects/ray-tracing/images/b0f6a29a-95f0-4270-9bad-0783fafe6cb2_rw_600.png" alt="Stuck In A Loop puzzle room screenshot">
+  </figure>
+  <figure>
+    <img src="/projects/stuck-in-a-loop/images/d4bd3365-3ef4-4977-8da7-2c95dcecb2b4_rw_1200.PNG" alt="Comments from Game Jam">
+    <figcaption>Comments from Game Jam</figcaption>
+  </figure>
+  <figure>
+    <img src="/projects/stuck-in-a-loop/images/5d6b5945-42a7-4293-abf2-947a27d19451_rw_1200.PNG" alt="Comments from itch.io">
+    <figcaption>Comments from itch.io</figcaption>
+  </figure>
 </div>
 
 ## Path Tracing
